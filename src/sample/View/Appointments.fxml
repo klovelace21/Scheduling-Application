@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="418.0" prefWidth="865.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller.AppointmentsController">
+   <children>
+      <TableView fx:id="appointmentsTableView" layoutY="122.0" prefHeight="200.0" prefWidth="865.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" prefWidth="52.0" text="Appt. ID" />
+          <TableColumn fx:id="titleCol" prefWidth="56.0" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="83.0" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="73.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="110.0" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="111.0" text="Type" />
+            <TableColumn fx:id="startTimeCol" prefWidth="136.0" text="Start Time" />
+            <TableColumn fx:id="endTimeCol" prefWidth="136.0" text="End Time" />
+            <TableColumn fx:id="customerIdCol" prefWidth="60.0" text="Cust ID" />
+            <TableColumn fx:id="userIdCol" prefWidth="46.0" text="User ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="unsortedViewRad" layoutX="56.0" layoutY="81.0" mnemonicParsing="false" onAction="#onActionGrp1" selected="true" text="View All">
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+         <toggleGroup>
+            <ToggleGroup fx:id="grp1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="viewByMonthRad" layoutX="201.0" layoutY="81.0" mnemonicParsing="false" onAction="#onActionGrp1" text="View By Month" toggleGroup="$grp1">
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+      </RadioButton>
+      <RadioButton fx:id="viewByWeekRad" layoutX="360.0" layoutY="81.0" mnemonicParsing="false" onAction="#onActionGrp1" text="View By Week" toggleGroup="$grp1">
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+      </RadioButton>
+      <Button fx:id="modifyAppointmentBtn" layoutX="213.0" layoutY="340.0" mnemonicParsing="false" onAction="#onActionOpenModifyAppointment" text="Modify Appointment" />
+      <Button fx:id="addAppointmentBtn" layoutX="64.0" layoutY="340.0" mnemonicParsing="false" onAction="#onActionOpenAddAppointment" text="Add Appointment" AnchorPane.rightAnchor="689.0" />
+      <Button fx:id="deleteAppointmentBtn" layoutX="363.0" layoutY="340.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" text="Delete Appointment" />
+      <Button fx:id="viewCustomersBtn" layoutX="733.0" layoutY="77.0" mnemonicParsing="false" onAction="#onActionOpenCustomers" text="View Customers" />
+      <Label layoutX="36.0" layoutY="20.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutBtn" layoutX="772.0" layoutY="340.0" mnemonicParsing="false" onAction="#onActionLogout" text="Logout" />
+      <Button fx:id="viewReportsBtn" layoutX="614.0" layoutY="77.0" mnemonicParsing="false" onAction="#onActionOpenReports" text="View Reports" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller.ReportsController">
+   <children>
+      <Label layoutX="23.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewAppointmentsBtn" layoutX="330.0" layoutY="17.0" mnemonicParsing="false" onAction="#onActionViewAppointments" text="View Appointments" />
+      <Button fx:id="viewCustomersBtn" layoutX="473.0" layoutY="17.0" mnemonicParsing="false" onAction="#onActionViewCustomers" text="View Customers" />
+      <Label layoutX="23.0" layoutY="92.0" text="View number of appointments by Month and Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="monthComboBox" layoutX="22.0" layoutY="131.0" prefWidth="150.0" />
+      <ComboBox fx:id="typeComboBox" layoutX="180.0" layoutY="132.0" prefWidth="150.0" />
+      <Label fx:id="numberOfAppointmentsLbl" layoutX="451.0" layoutY="134.0" prefHeight="20.0" prefWidth="45.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="calculateBtn" layoutX="336.0" layoutY="132.0" mnemonicParsing="false" onAction="#onActionCalculate" text="Calculate" />
+      <Label layoutX="23.0" layoutY="180.0" text="View each contacts schedule">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="contactComboBox" layoutX="22.0" layoutY="217.0" prefWidth="150.0" />
+      <Button fx:id="viewScheduleBtn" layoutX="200.0" layoutY="217.0" mnemonicParsing="false" onAction="#onActionViewSchedule" text="View Schedule" />
+      <Label layoutX="23.0" layoutY="266.0" text="View number of customers per Country">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countryComboBox" layoutX="22.0" layoutY="299.0" onAction="#onActionCalculateCustomersPerCountry" prefWidth="150.0" />
+      <Label fx:id="numberOfCustomersLbl" layoutX="227.0" layoutY="303.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="345.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller.CustomersController">
+   <children>
+      <TableView fx:id="customerTableView" layoutX="31.0" layoutY="73.0" prefHeight="200.0" prefWidth="1050.0">
+        <columns>
+          <TableColumn fx:id="customerIdCol" prefWidth="46.0" text="Cust ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="126.0" text="Customer Name" />
+            <TableColumn fx:id="addressCol" prefWidth="144.0" text="Address" />
+            <TableColumn fx:id="postalCodeCol" prefWidth="74.0" text="Postal Code" />
+            <TableColumn fx:id="phoneCol" prefWidth="102.0" text="Phone" />
+            <TableColumn fx:id="createDateCol" prefWidth="128.0" text="Create Date" />
+            <TableColumn fx:id="createdByCol" prefWidth="67.0" text="Created By" />
+            <TableColumn fx:id="lastUpdateCol" prefWidth="128.0" text="Last Update" />
+            <TableColumn fx:id="lastUpdatedByCol" prefWidth="96.0" text="Last Updated By" />
+            <TableColumn fx:id="divisionCol" prefWidth="137.0" text="Division" />
+        </columns>
+      </TableView>
+      <Button fx:id="addCustomerBtn" layoutX="57.0" layoutY="285.0" mnemonicParsing="false" onAction="#onActionOpenAddCustomer" text="Add Customer" />
+      <Button fx:id="modifyCustomerBtn" layoutX="166.0" layoutY="285.0" mnemonicParsing="false" onAction="#onActionOpenModifyCustomer" text="Modify Customer" />
+      <Button fx:id="deleteCustomerBtn" layoutX="290.0" layoutY="285.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete Customer" />
+      <Button fx:id="viewAppointmentsBtn" layoutX="851.0" layoutY="37.0" mnemonicParsing="false" onAction="#onActionOpenAppointments" text="View Appointments" />
+      <Label layoutX="31.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutBtn" layoutX="980.0" layoutY="285.0" mnemonicParsing="false" onAction="#onActionLogout" text="Logout" />
+      <Button fx:id="viewReportsBtn" layoutX="734.0" layoutY="37.0" mnemonicParsing="false" onAction="#onActionOpenReports" text="View Reports" />
+   </children>
+</AnchorPane>
